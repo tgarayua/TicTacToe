@@ -13,6 +13,7 @@
 		1398ADC72B2827420055C6F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1398ADC62B2827420055C6F3 /* Preview Assets.xcassets */; };
 		1398ADCE2B2834640055C6F3 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398ADCD2B2834640055C6F3 /* Alerts.swift */; };
 		1398ADD02B283B830055C6F3 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398ADCF2B283B830055C6F3 /* GameViewModel.swift */; };
+		1398ADD22B2842EE0055C6F3 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398ADD12B2842EE0055C6F3 /* SplashScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		1398ADC62B2827420055C6F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1398ADCD2B2834640055C6F3 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		1398ADCF2B283B830055C6F3 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		1398ADD12B2842EE0055C6F3 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				1398ADC52B2827420055C6F3 /* Preview Content */,
 				1398ADCD2B2834640055C6F3 /* Alerts.swift */,
 				1398ADCF2B283B830055C6F3 /* GameViewModel.swift */,
+				1398ADD12B2842EE0055C6F3 /* SplashScreenView.swift */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				1398ADD02B283B830055C6F3 /* GameViewModel.swift in Sources */,
 				1398ADC22B2827400055C6F3 /* GameView.swift in Sources */,
+				1398ADD22B2842EE0055C6F3 /* SplashScreenView.swift in Sources */,
 				1398ADCE2B2834640055C6F3 /* Alerts.swift in Sources */,
 				1398ADC02B2827400055C6F3 /* TicTacToeApp.swift in Sources */,
 			);

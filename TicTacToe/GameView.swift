@@ -18,6 +18,11 @@ struct GameView: View {
             VStack {
                 Spacer()
                 
+                Text("Tic Tac Toe")
+                    .font(Font.custom("Baskerville-Bold", size: 60))
+
+                Spacer()
+                
                 LazyVGrid(columns: viewModel.columns, spacing: 5) {
                     ForEach(0..<9) { index in
                         ZStack {
