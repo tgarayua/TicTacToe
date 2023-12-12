@@ -14,7 +14,7 @@ struct ContentView: View {
                                GridItem(.flexible())]
     
     @State private var moves: [Move?] = Array(repeating: nil, count: 9)
-    @State private var isHumansTurn = true
+    @State private var isGameboardDisabled = false
     
     var body: some View {
         GeometryReader { geometry in
@@ -35,15 +35,38 @@ struct ContentView: View {
                                 .foregroundColor(.white)
                         }
                         .onTapGesture {
-                            moves[index] = Move(player: isHumansTurn ? .human : .computer, boardIndex: index)
-                            isHumansTurn.toggle()
+                            if isSquareOccupied(in: moves, forIndex: index) { return }
+                            moves[index] = Move(player: .human, boardIndex: index)
+                            isGameboardDisabled = true
+                            
+                            // check for win condtion or draw
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                let computerPostion = determinComputerMovvePostion(in: moves)
+                                moves[computerPostion] = Move(player: .computer, boardIndex: computerPostion)
+                                isGameboardDisabled = false
+                            }
                         }
                     }
                 }
                 Spacer()
             }
+            .disabled(isGameboardDisabled)
             .padding()
         }
+    }
+    
+    func isSquareOccupied(in moves: [Move?], forIndex index: Int) -> Bool {
+        return moves.contains(where: { $0?.boardIndex == index})
+    }
+    
+    func determinComputerMovvePostion(in moves: [Move?]) -> Int {
+        var movePostion = Int.random(in: 0..<9)
+        
+        while isSquareOccupied(in: moves, forIndex: movePostion) {
+            movePostion = Int.random(in: 0..<9)
+        }
+        return movePostion
     }
 }
 
