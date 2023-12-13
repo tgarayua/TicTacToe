@@ -27,7 +27,6 @@ struct GameView: View {
                         .ignoresSafeArea()
                 }
                 
-                
                 VStack {
                     Image("TicTacToeLogo")
                         .resizable()
